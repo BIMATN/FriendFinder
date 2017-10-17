@@ -144,8 +144,11 @@
 					person.scores.push($('#a'+i).val().trim())
 				};
 				console.log(person);
-				//code for ajax request to server which will provide created object
-				$('#form')[0].reset();
+				//code for post request to server which will provide created object
+				$.post("http://localhost:3000/api/friends",	person,	function(data, status){
+					alert("Data: " + data + "\nStatus: " + status);
+					$('#form')[0].reset();
+				});
 			});
 		});
 	</script>
