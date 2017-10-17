@@ -4,136 +4,150 @@
 <head>
   	<title>Find Your Friend!</title>
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 <body>
-	<body>
-		<div class="container">
-			<div class = "jumbotron bg-primary">
-				<div class = "text-center text-warning"><h1>FRIEND FINDER</h1></div>
-				<div class = "text-center text-secondary text-dark"><h3>Answer Our Questions and You'll Find Friends For Life</h3></div>
-			</div>
-			<div class = "row justify-content-center">
-				<div class = "col-xl-12">
-					<div class="card text-white bg-info mb-3 mx-auto">
-					  <div class="card-header text-center">Your Friends Await You</div>
-					  <div class="card-body text-center">
-					    <h4 class="card-title">Compatibility Test</h4>
-					    <form>
-					    	<div class="form-group col-xl-4 mx-auto">
-					    	   <label for="name">Please Enter Your Name</label>
-					    	   <textarea class="form-control" id="name" rows="1"></textarea>
-					    	</div>
-					    	<div class="form-group col-xl-4 mx-auto">
-					    	   <label for="photo">Please Provide a Link to a Photo of Yourself</label>
-					    	   <textarea class="form-control" id="photo" rows="1"></textarea>
-					    	</div>
-						    <div class="form-group">
-						        <label for="q1">1. The thought of Death is both frightening and curious</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <div class="form-group">
-						        <label for="q2">2. Superman's intellect is his greatest attribute</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <div class="form-group">
-						        <label for="q3">3. To have a story to tell is the greatest gift</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <div class="form-group">
-						        <label for="q4">4. Books are the best medium for passing on information</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <div class="form-group">
-						        <label for="q5">5. Space is better than the ocean, but not as good as the core of the earth</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <div class="form-group">
-						        <label for="q6">6. Igloos can contain enough heat to keep you warm</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <div class="form-group">
-						        <label for="q7">7. Would you rather float on top of a lake or at the bottom?</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <div class="form-group">
-						        <label for="q8">8. Would you rather float on top of a lake or at the bottom?</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <div class="form-group">
-						        <label for="q9">9. Would you rather float on top of a lake or at the bottom?</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <div class="form-group">
-						        <label for="q10">10. Would you rather float on top of a lake or at the bottom?</label>
-							        <select class="form-control col-xl-2 mx-auto" id="a1">
-							          <option>1</option>
-							          <option>2</option>
-							          <option>3</option>
-							          <option>4</option>
-							          <option>5</option>
-							        </select>
-						    </div>
-						    <button type="submit" class="btn btn-primary">Submit</button>
-						</form>
-					  </div>
-					</div>
+	<div class="container">
+		<div class = "jumbotron bg-primary">
+			<div class = "text-center text-warning"><h1>FRIEND FINDER</h1></div>
+			<div class = "text-center text-secondary text-dark"><h3>Answer Our Questions and You'll Find Friends For Life</h3></div>
+		</div>
+		<div class = "row justify-content-center">
+			<div class = "col-xl-12">
+				<div class="card text-white bg-info mb-3 mx-auto">
+				  <div class="card-header text-center">Your Friends Await You</div>
+				  <div class="card-body text-center">
+				    <h4 class="card-title">Compatibility Test</h4>
+				    <form id="form">
+				    	<div class="form-group col-xl-4 mx-auto">
+				    	   <label for="name">Please Enter Your Name</label>
+				    	   <textarea class="form-control" id="name" rows="1" type="text"></textarea>
+				    	</div>
+				    	<div class="form-group col-xl-4 mx-auto">
+				    	   <label for="photo">Please Provide a Link to a Photo of Yourself</label>
+				    	   <textarea class="form-control" id="photo" rows="1" type="url"></textarea>
+				    	</div>
+				    	<div>Please choose a response from 1 to 5 where 1 is "completely disagree" and 5 is "completely agree"</div>
+					    <div class="form-group">
+					        <label for="q1">1. The thought of death is both frightening and curious</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a1">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <div class="form-group">
+					        <label for="q2">2. Superman's intellect is his greatest attribute</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a2">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <div class="form-group">
+					        <label for="q3">3. To have a story to tell is the greatest gift</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a3">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <div class="form-group">
+					        <label for="q4">4. Books are the best medium for passing on information</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a4">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <div class="form-group">
+					        <label for="q5">5. Space is better than the ocean, but not as good as the core of the earth</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a5">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <div class="form-group">
+					        <label for="q6">6. Igloos can contain enough heat to keep you warm</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a6">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <div class="form-group">
+					        <label for="q7">7. You would rather float on top of a lake than dive to the bottom</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a7">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <div class="form-group">
+					        <label for="q8">8. Music is more or less the same, what really matters is the one listening</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a8">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <div class="form-group">
+					        <label for="q9">9. A delicious dessert is worth having before dinner</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a9">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <div class="form-group">
+					        <label for="q10">10. Day is to night as life is to death</label>
+						        <select class="form-control col-xl-2 mx-auto" id="a10">
+						          <option>1</option>
+						          <option>2</option>
+						          <option>3</option>
+						          <option>4</option>
+						          <option>5</option>
+						        </select>
+					    </div>
+					    <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				  </div>
 				</div>
 			</div>
 		</div>
-	</body>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('.btn').on("click", function(){
+				event.preventDefault();
+				let person = {name: $('#name').val().trim(), photo: $('#photo').val().trim(), scores:[]};
+				for (i=1;i<11;i++){
+					person.scores.push($('#a'+i).val().trim())
+				};
+				console.log(person);
+				//code for ajax request to server which will provide created object
+				$('#form')[0].reset();
+			});
+		});
+	</script>
 </body>
 </html>
