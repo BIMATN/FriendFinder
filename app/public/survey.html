@@ -145,8 +145,9 @@
 				};
 				console.log(person);
 				//code for post request to server which will provide created object
-				$.post("http://localhost:3000/api/friends",	person,	function(data, status){
-					alert("Data: " + data + "\nStatus: " + status);
+				$.post("http://localhost:3000/api/friends",	person)
+				.done(function(data){
+					console.log(data);
 					$('#form')[0].reset();
 				});
 			});
