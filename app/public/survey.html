@@ -145,9 +145,9 @@
 				};
 				console.log(person);
 				//code for post request to server which will provide created object
-				$.post("http://localhost:3000/api/friends",	person)
+				$.post("http://localhost:3000/api/friends",	JSON.stringify(person))
 				.done(function(data){
-					console.log('DATA', data);
+					console.log('Server Response: ', data);
 					$('#form')[0].reset();
 				}).fail((e) => {
 					console.log('Here is an error:', e);

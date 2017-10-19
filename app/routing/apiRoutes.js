@@ -2,13 +2,7 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
-const bodyParser = require('body-parser');
-const fs = require('fs');
-const path = require('path');
 let friends = require('../data/friends.js');
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 router.get('/api/friends', function(req, res){
 	//displays json of all friends
@@ -19,7 +13,7 @@ router.get('/api/friends', function(req, res){
 router.post('/api/friends', function(req, res){
 	//incoming survey results
 	console.log("ALERT: Data posted through the friends API");
-	res.send("Server status: 200");
+	res.send(req.body);
 	let person = req.body;
 	console.log(person);
 	//compatibility logic
