@@ -18,7 +18,7 @@
 				  <div class="card-header text-center">Your Friends Await You</div>
 				  <div class="card-body text-center">
 				    <h4 class="card-title">Compatibility Test</h4>
-				    <form id="form">
+				    <form id="form" method="post" action="/api/friends">
 				    	<div class="form-group col-xl-4 mx-auto">
 				    	   <label for="name">Please Enter Your Name</label>
 				    	   <textarea class="form-control" id="name" rows="1" type="text"></textarea>
@@ -147,8 +147,10 @@
 				//code for post request to server which will provide created object
 				$.post("http://localhost:3000/api/friends",	person)
 				.done(function(data){
-					console.log(data);
+					console.log('DATA', data);
 					$('#form')[0].reset();
+				}).fail((e) => {
+					console.log('Here is an error:', e);
 				});
 			});
 		});
