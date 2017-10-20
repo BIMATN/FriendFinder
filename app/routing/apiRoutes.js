@@ -16,8 +16,8 @@ router.post('/api/friends', function(req, res){
 	res.send(req.body);
 	let person = req.body;
 	console.log(person);
-	//compatibility logic
-	/*let compatScores = [];
+/*	compatibility logic
+	let compatScores = [];
 	for(i=0;i<friends.length;i++){
 		let potFriendScore = friends[i].scores;
 		let personScore = person.score;
